@@ -344,7 +344,7 @@ const en = {
   login: {
     login: 'Log in',
     username: 'Username',
-    placeholder: 'e.g. lain',
+    placeholder: 'e.g. sakaki',
     password: 'Password',
     register: 'Register',
     logout: 'Log out'
