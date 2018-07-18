@@ -359,7 +359,7 @@ const en = {
   post_status: {
     posting: 'Posting',
     content_warning: 'Subject/Content Warning (optional)',
-    default: 'what's on your mind? :3',
+    default: 'what\'s on your mind? :3',
     account_not_locked_warning: 'Your account is not {0}. Anyone can follow you to view your follower-only posts.',
     account_not_locked_warning_link: 'locked',
     direct_warning: 'This post will only be visible to all the mentioned users.',
