@@ -365,7 +365,7 @@ const en = {
     account_not_locked_warning_link: 'locked',
     direct_warning: 'This post will only be visible to all the mentioned users.',
     scope: {
-      ublic: 'Public - Mew to public timelines',
+      public: 'Public - Mew to public timelines',
       unlisted: 'Unlisted - Do not mew to public timelines',
       private: 'Followers-only - Mew to followers only',
       direct: 'Direct - Mew to mentioned users only'
