@@ -29,7 +29,8 @@ const Status = {
     userExpanded: false,
     preview: null,
     showPreview: false,
-    showingTall: false
+    showingTall: false,
+    expandingCW: false
   }),
   computed: {
     muteWords () {
@@ -91,6 +92,9 @@ const Status = {
       // use conversation highlight only when in conversation
       return this.status.id === this.highlight
     },
+    hideCWStatus () {
+        return !this.expandingCW && this.status.summary
+    },
     // This is a bit hacky, but we want to approximate post height before rendering
     // so we count newlines (masto uses <p> for paragraphs, GS uses <br> between them)
     // as well as approximate line count by counting characters and approximating ~80
@@ -99,6 +103,9 @@ const Status = {
     // Using max-height + overflow: auto for status components resulted in false positives
     // very often with japanese characters, and it was very annoying.
     hideTallStatus () {
+      if (this.status.summary) {
+        return false
+      }
       if (this.showingTall) {
         return false
       }
@@ -165,6 +172,9 @@ const Status = {
     },
     toggleShowTall () {
       this.showingTall = !this.showingTall
+    },
+    toggleExpandCW () {
+      this.expandingCW = !this.expandingCW
     },
     replyEnter (id, event) {
       this.showPreview = true
