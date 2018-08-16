@@ -9,11 +9,11 @@
           <div class='text-fields'>
             <div class='form-group'>
               <label for='username'>{{$t('login.username')}}</label>
-              <input :disabled="registering" v-model='user.username' class='form-control' id='username' placeholder='e.g. lain'>
+              <input :disabled="registering" v-model='user.username' class='form-control' id='username' placeholder='e.g. sakaki'>
             </div>
             <div class='form-group'>
               <label for='fullname'>{{$t('registration.fullname')}}</label>
-              <input :disabled="registering" v-model='user.fullname' class='form-control' id='fullname' placeholder='e.g. Lain Iwakura'>
+              <input :disabled="registering" v-model='user.fullname' class='form-control' id='fullname' placeholder='e.g. Sakaki'>
             </div>
             <div class='form-group'>
               <label for='email'>{{$t('registration.email')}}</label>
