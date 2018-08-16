@@ -42,12 +42,12 @@ export default {
     this.greenColorLocal = rgbstr2hex(this.$store.state.config.colors.cGreen)
     this.orangeColorLocal = rgbstr2hex(this.$store.state.config.colors.cOrange)
 
-    this.btnRadiusLocal = this.$store.state.config.radii.btnRadius || 4
-    this.inputRadiusLocal = this.$store.state.config.radii.inputRadius || 4
-    this.panelRadiusLocal = this.$store.state.config.radii.panelRadius || 10
+    this.btnRadiusLocal = this.$store.state.config.radii.btnRadius || 3
+    this.inputRadiusLocal = this.$store.state.config.radii.inputRadius || 3
+    this.panelRadiusLocal = this.$store.state.config.radii.panelRadius || 5
     this.avatarRadiusLocal = this.$store.state.config.radii.avatarRadius || 5
-    this.avatarAltRadiusLocal = this.$store.state.config.radii.avatarAltRadius || 50
-    this.tooltipRadiusLocal = this.$store.state.config.radii.tooltipRadius || 2
+    this.avatarAltRadiusLocal = this.$store.state.config.radii.avatarAltRadius || 5
+    this.tooltipRadiusLocal = this.$store.state.config.radii.tooltipRadius || 3
     this.attachmentRadiusLocal = this.$store.state.config.radii.attachmentRadius || 5
   },
   methods: {
