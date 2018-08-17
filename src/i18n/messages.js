@@ -270,7 +270,7 @@ const en = {
     load_older: 'Load older mews',
     conversation: 'Conversation',
     collapse: 'Collapse',
-    repeated: 'repeated'
+    repeated: 'boosted'
   },
   settings: {
     user_settings: 'User Settings',
@@ -339,7 +339,7 @@ const en = {
     read: 'Read!',
     followed_you: 'followed you',
     favorited_you: 'favorited your status',
-    repeated_you: 'repeated your status'
+    repeated_you: 'boosted your status'
   },
   login: {
     login: 'Log in',
@@ -376,7 +376,7 @@ const en = {
     error_fetching_user: 'Error fetching user'
   },
   general: {
-    submit: 'Submit',
+    submit: 'Post',
     apply: 'Apply'
   },
   user_profile: {
