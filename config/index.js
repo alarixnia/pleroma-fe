@@ -23,12 +23,12 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:4000/',
+        target: 'https://post.catgirl.science/',
         changeOrigin: true,
         cookieDomainRewrite: 'localhost'
       },
       '/socket': {
-        target: 'http://localhost:4000/',
+        target: 'https://post.catgirl.science/',
         changeOrigin: true,
         cookieDomainRewrite: 'localhost',
         ws: true
