@@ -78,7 +78,7 @@
             <div @click.prevent="linkClicked" class="status-content media-body" v-html="status.statusnet_html" v-if="!hideCWStatus"></div>
             <div @click.prevent="linkClicked" class="status-content media-body" v-html="status.summary" v-else></div>
             <a v-if="hideCWStatus" href="#" class="cw-status-hider" @click.prevent="toggleExpandCW">Show more</a>
-            <a v-if="showingTall || (this.status.summary && expandingCW)" href="#" class="status-unhider" @click.prevent="expandingCW ? toggleExpandCW() : toggleShowTall()">Show less</a>
+            <a v-if="showingMore" href="#" class="status-unhider" @click.prevent="expandingCW ? toggleExpandCW() : toggleShowTall()">Show less</a>
           </div>
 
           <div v-if='status.attachments' class='attachments media-body'>

@@ -114,6 +114,9 @@ const Status = {
       const lengthScore = this.status.statusnet_html.split(/<p|<br/).length + this.status.text.length / 80
       return lengthScore > 20
     },
+    showingMore () {
+      return this.showingTall || (this.status.summary && this.expandingCW)
+    },
     attachmentSize () {
       if ((this.$store.state.config.hideAttachments && !this.inConversation) ||
         (this.$store.state.config.hideAttachmentsInConv && this.inConversation)) {
