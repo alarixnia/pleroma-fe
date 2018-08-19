@@ -11,6 +11,7 @@ const settings = {
       autoLoadLocal: this.$store.state.config.autoLoad,
       streamingLocal: this.$store.state.config.streaming,
       hoverPreviewLocal: this.$store.state.config.hoverPreview,
+      expandCWLocal: this.$store.state.config.expandCW,
       stopGifs: this.$store.state.config.stopGifs
     }
   },
@@ -44,6 +45,9 @@ const settings = {
     muteWordsString (value) {
       value = filter(value.split('\n'), (word) => trim(word).length > 0)
       this.$store.dispatch('setOption', { name: 'muteWords', value })
+    },
+    expandCWLocal (value) {
+      this.$store.dispatch('setOption', { name: 'expandCW', value })
     },
     stopGifs (value) {
       this.$store.dispatch('setOption', { name: 'stopGifs', value })

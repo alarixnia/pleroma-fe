@@ -22,16 +22,18 @@ const Status = {
     'noHeading',
     'inlineExpanded'
   ],
-  data: () => ({
-    replying: false,
-    expanded: false,
-    unmuted: false,
-    userExpanded: false,
-    preview: null,
-    showPreview: false,
-    showingTall: false,
-    expandingCW: false
-  }),
+  data () {
+    return {
+      replying: false,
+      expanded: false,
+      unmuted: false,
+      userExpanded: false,
+      preview: null,
+      showPreview: false,
+      showingTall: false,
+      expandingCW: this.$store.state.config.expandCW
+    }
+  },
   computed: {
     muteWords () {
       return this.$store.state.config.muteWords
