@@ -145,12 +145,12 @@ export default {
       this.greenColorLocal = rgbstr2hex(colors.cGreen)
       this.orangeColorLocal = rgbstr2hex(colors.cOrange)
 
-      this.btnRadiusLocal = radii.btnRadius || 4
-      this.inputRadiusLocal = radii.inputRadius || 4
-      this.panelRadiusLocal = radii.panelRadius || 10
-      this.avatarRadiusLocal = radii.avatarRadius || 5
-      this.avatarAltRadiusLocal = radii.avatarAltRadius || 50
-      this.tooltipRadiusLocal = radii.tooltipRadius || 2
+      this.btnRadiusLocal = radii.btnRadius || 3
+      this.inputRadiusLocal = radii.inputRadius || 3
+      this.panelRadiusLocal = radii.panelRadius || 5
+      this.avatarRadiusLocal = radii.avatarRadius || 4
+      this.avatarAltRadiusLocal = radii.avatarAltRadius || 4
+      this.tooltipRadiusLocal = radii.tooltipRadius || 3
       this.attachmentRadiusLocal = radii.attachmentRadius || 5
     }
   },
