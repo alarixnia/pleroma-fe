@@ -94,9 +94,6 @@ const Status = {
       // use conversation highlight only when in conversation
       return this.status.id === this.highlight
     },
-    hideCWStatus () {
-        return !this.expandingCW && this.status.summary
-    },
     // This is a bit hacky, but we want to approximate post height before rendering
     // so we count newlines (masto uses <p> for paragraphs, GS uses <br> between them)
     // as well as approximate line count by counting characters and approximating ~80
@@ -104,15 +101,24 @@ const Status = {
     //
     // Using max-height + overflow: auto for status components resulted in false positives
     // very often with japanese characters, and it was very annoying.
+    tallStatus () {
+      const lengthScore = this.status.statusnet_html.split(/<p|<br/).length + this.status.text.length / 80
+      return lengthScore > 20
+    },
+    hideCWStatus () {
+        if (this.tallStatus && this.$store.state.config.expandCW) {
+          return false
+        }
+        return !this.expandingCW && this.status.summary
+    },
     hideTallStatus () {
-      if (this.status.summary) {
+      if (this.status.summary && !this.$store.state.config.expandCW) {
         return false
       }
       if (this.showingTall) {
         return false
       }
-      const lengthScore = this.status.statusnet_html.split(/<p|<br/).length + this.status.text.length / 80
-      return lengthScore > 20
+      return this.tallStatus
     },
     showingMore () {
       return this.showingTall || (this.status.summary && this.expandingCW)
