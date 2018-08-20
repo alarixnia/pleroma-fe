@@ -175,11 +175,16 @@ const Status = {
     toggleUserExpanded () {
       this.userExpanded = !this.userExpanded
     },
-    toggleShowTall () {
-      this.showingTall = !this.showingTall
-    },
-    toggleExpandCW () {
-      this.expandingCW = !this.expandingCW
+    toggleShowMore () {
+      if (this.showingTall) {
+        this.showingTall = false
+      } else if (this.expandingCW) {
+        this.expandingCW = false
+      } else if (this.hideTallStatus) {
+        this.showingTall = true
+      } else if (this.hideCWStatus) {
+        this.expandingCW = true
+      }
     },
     replyEnter (id, event) {
       this.showPreview = true
