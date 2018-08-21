@@ -38,10 +38,6 @@
           <input type="checkbox" id="hoverPreview" v-model="hoverPreviewLocal">
           <label for="hoverPreview">{{$t('settings.reply_link_preview')}}</label>
         </li>
-        <li>
-          <input type="checkbox" id="expandCW" v-model="expandCWLocal">
-          <label for="expandCW">{{$t('settings.expand_cw')}}</label>
-        </li>
       </ul>
     </div>
     <div class="setting-item">
