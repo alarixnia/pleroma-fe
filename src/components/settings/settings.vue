@@ -41,9 +41,9 @@
         <li>
           <label for="replyVisibility" class="select">
             <select id="replyVisibility" v-model="replyVisibilityLocal">
-              <option value="all" selected>{{$t('settings.replies_show_all')}}</option>
-              <option value="following">{{$t('settings.replies_show_following')}}</option>
-              <option value="undirected">{{$t('settings.replies_show_undirected')}}</option>
+              <option value="all" selected>{{$t('settings.reply_visibility_all')}}</option>
+              <option value="following">{{$t('settings.reply_visibility_following')}}</option>
+              <option value="self">{{$t('settings.reply_visibility_self')}}</option>
             </select>
             <i class="icon-down-open"/>
           </label>
