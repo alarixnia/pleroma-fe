@@ -109,7 +109,7 @@ const Status = {
       if (this.status.in_reply_to_status_id) {
         return true
       }
-      // For private replies where we can't see the OP, this.status.in_reply_to_status_id will be null.
+      // For private replies where we can't see the OP, in_reply_to_status_id will be null.
       // So instead, check that the post starts with a @mention.
       if (this.status.visibility === 'private') {
         var textBody = this.status.text
@@ -130,7 +130,7 @@ const Status = {
       if (this.status.user.id === this.$store.state.users.currentUser.id) {
         return false
       }
-      if (this.status.activity_type === "repeat") {
+      if (this.status.activity_type === 'repeat') {
         return false
       }
       var checkFollowing = this.$store.state.config.replyVisibility === 'following'
