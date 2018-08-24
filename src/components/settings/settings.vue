@@ -41,9 +41,9 @@
         <li>
           <label for="replyVisibility" class="select">
             <select id="replyVisibility" v-model="replyVisibilityLocal">
-              <option value="all" selected>Show all replies</option>
-              <option value="following">Only show replies to users you're following</option>
-              <option value="OP">Only show replies by the original poster (follow up posts)</option>
+              <option value="all" selected>{{$t('settings.replies_show_all')}}</option>
+              <option value="following">{{$t('settings.replies_show_following')}}</option>
+              <option value="undirected">{{$t('settings.replies_show_undirected')}}</option>
             </select>
             <i class="icon-down-open"/>
           </label>
