@@ -135,7 +135,10 @@ const Status = {
       }
       var checkFollowing = this.$store.state.config.replyVisibility === 'following'
       for (var i = 0; i < this.status.attentions.length; ++i) {
-        if (checkFollowing && this.status.attentions[i].following && this.status.user.id !== this.status.attentions[i].id) {
+        if (this.status.user.id === this.status.attentions[i].id) {
+          continue
+        }
+        if (checkFollowing && this.status.attentions[i].following) {
           return false
         }
         if (this.status.attentions[i].id === this.$store.state.users.currentUser.id) {
