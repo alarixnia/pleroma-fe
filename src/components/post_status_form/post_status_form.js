@@ -53,7 +53,7 @@ const PostStatusForm = {
       highlighted: 0,
       newStatus: {
         status: statusText,
-        nsfw: true,
+        nsfw: false,
         files: [],
         visibility: this.messageScope || this.$store.state.users.currentUser.default_scope
       },
