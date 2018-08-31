@@ -396,20 +396,13 @@ const en = {
     attachments_sensitive: 'Attachments marked sensitive',
     attachments_not_sensitive: 'Attachments <strong>not</strong> marked sensitive',
     scope: {
-<<<<<<< HEAD
       public: 'Public - Mew to public timelines',
       unlisted: 'Unlisted - Do not mew to public timelines',
       private: 'Followers-only - Mew to followers only',
       direct: 'Direct - Mew to mentioned users only'
-=======
-      public: 'Public - Post to public timelines',
-      unlisted: 'Unlisted - Do not post to public timelines',
-      private: 'Followers-only - Post to followers only',
-      direct: 'Direct - Post to mentioned users only'
     },
     content_type: {
       plain_text: 'Plain text'
->>>>>>> 33b13d3775c2eca44e0319b79565d4b1aaeaf3f2
     }
   },
   finder: {
