@@ -273,7 +273,7 @@ const en = {
     load_older: 'Load older mews',
     conversation: 'Conversation',
     collapse: 'Collapse',
-    repeated: 'boosted'
+    repeated: 'boosted',
     no_retweet_hint: 'Post is marked as followers-only or direct and cannot be repeated'
   },
   settings: {
