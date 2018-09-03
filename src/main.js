@@ -48,6 +48,8 @@ const persistedStateOptions = {
     'config.collapseMessageWithSubject',
     'config.hideAttachments',
     'config.hideAttachmentsInConv',
+    'config.hidePostStats',
+    'config.hideUserStats',
     'config.hideNsfw',
     'config.replyVisibility',
     'config.notificationVisibility',
@@ -121,6 +123,8 @@ window.fetch('/api/statusnet/config.json')
       var scopeOptionsEnabled = (config.scopeOptionsEnabled)
       var formattingOptionsEnabled = (config.formattingOptionsEnabled)
       var collapseMessageWithSubject = (config.collapseMessageWithSubject)
+      var hidePostStats = (config.hidePostStats)
+      var hideUserStats = (config.hideUserStats)
 
       store.dispatch('setOption', { name: 'theme', value: theme })
       store.dispatch('setOption', { name: 'background', value: background })
@@ -134,6 +138,8 @@ window.fetch('/api/statusnet/config.json')
       store.dispatch('setOption', { name: 'scopeOptionsEnabled', value: scopeOptionsEnabled })
       store.dispatch('setOption', { name: 'formattingOptionsEnabled', value: formattingOptionsEnabled })
       store.dispatch('setOption', { name: 'collapseMessageWithSubject', value: collapseMessageWithSubject })
+      store.dispatch('setOption', { name: 'hidePostStats', value: hidePostStats })
+      store.dispatch('setOption', { name: 'hideUserStats', value: hideUserStats })
       if (chatDisabled) {
         store.dispatch('disableChat')
       }
