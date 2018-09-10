@@ -6,6 +6,8 @@ import { filter, trim } from 'lodash'
 
 const settings = {
   data () {
+    const config = this.$store.state.config
+
     return {
       hideAttachmentsLocal: this.$store.state.config.hideAttachments,
       hideAttachmentsInConvLocal: this.$store.state.config.hideAttachmentsInConv,
@@ -21,7 +23,9 @@ const settings = {
       streamingLocal: this.$store.state.config.streaming,
       pauseOnUnfocusedLocal: this.$store.state.config.pauseOnUnfocused,
       hoverPreviewLocal: this.$store.state.config.hoverPreview,
-      collapseMessageWithSubjectLocal: this.$store.state.config.collapseMessageWithSubject,
+      collapseMessageWithSubjectLocal: typeof config.collapseMessageWithSubject === 'undefined'
+        ? config.defaultCollapseMessageWithSubject
+        : config.collapseMessageWithSubject,
       stopGifs: this.$store.state.config.stopGifs,
       loopSilentAvailable:
         // Firefox
