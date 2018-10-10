@@ -28,6 +28,15 @@ const settings = {
         ? instance.collapseMessageWithSubject
         : user.collapseMessageWithSubject,
       collapseMessageWithSubjectDefault: this.$t('settings.values.' + instance.collapseMessageWithSubject),
+      hidePostStatsLocal: user.hidePostStats,
+      hidePostStatsLocal: typeof user.hidePostStats === 'undefined'
+        ? instance.hidePostStats
+        : user.hidePostStats,
+      hidePostStatsDefault : this.$t('settings.values.' + instance.hidePostStats),
+      hideUserStatsLocal: typeof user.hideUserStats === 'undefined'
+        ? instance.hideUserStats
+        : user.hideUserStats,
+      hideUserStatsDefault : this.$t('settings.values.' + instance.hidePostStats),
       stopGifs: user.stopGifs,
       loopSilentAvailable:
         // Firefox

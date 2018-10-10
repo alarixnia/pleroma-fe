@@ -5,11 +5,8 @@ const browserLocale = (window.navigator.language || 'en').split('-')[0]
 
 const defaultState = {
   colors: {},
-  collapseMessageWithSubject: false,
   hideAttachments: false,
   hideAttachmentsInConv: false,
-  hidePostStats: false,
-  hideUserStats: false,
   hideNsfw: true,
   loopVideo: true,
   loopVideoSilentOnly: true,

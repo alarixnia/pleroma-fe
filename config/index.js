@@ -28,7 +28,7 @@ module.exports = {
         cookieDomainRewrite: 'localhost'
       },
       '/nodeinfo': {
-        target: 'http://localhost:4000/',
+        target: 'https://catgirl.science/',
         changeOrigin: true,
         cookieDomainRewrite: 'localhost'
       },
