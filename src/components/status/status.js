@@ -31,12 +31,13 @@ const Status = {
       preview: null,
       showPreview: false,
       showingTall: false,
-      expandingSubject: this.localCollapseSubjectDefault
+      expandingSubject: typeof this.$store.state.config.collapseMessageWithSubject === 'undefined'
+         ? !this.$store.state.instance.collapseMessageWithSubject
+         : !this.$store.state.config.collapseMessageWithSubject
     }
   },
   computed: {
     localCollapseSubjectDefault () {
-       console.log(this.$store.state.config.collapseMessageWithSubject + " " + this.$store.state.instance.collapseMessageWithSubject)
        return typeof this.$store.state.config.collapseMessageWithSubject === 'undefined'
          ? this.$store.state.instance.collapseMessageWithSubject
          : this.$store.state.config.collapseMessageWithSubject
