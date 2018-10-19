@@ -6,8 +6,8 @@ export default {
   data () {
     return {
       hideUserStatsLocal: typeof this.$store.state.config.hideUserStats === 'undefined'
-         ? this.$store.state.instance.hideUserStats
-         : this.$store.state.config.hideUserStats
+        ? this.$store.state.instance.hideUserStats
+        : this.$store.state.config.hideUserStats
     }
   },
   computed: {

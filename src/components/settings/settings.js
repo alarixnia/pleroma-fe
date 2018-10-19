@@ -13,8 +13,14 @@ const settings = {
       hideAttachmentsLocal: user.hideAttachments,
       hideAttachmentsInConvLocal: user.hideAttachmentsInConv,
       hideNsfwLocal: user.hideNsfw,
-      hidePostStatsLocal: user.hidePostStats,
-      hideUserStatsLocal: user.hideUserStats,
+      hidePostStatsLocal: typeof user.hidePostStats === 'undefined'
+        ? instance.hidePostStats
+        : user.hidePostStats,
+      hidePostStatsDefault: this.$t('settings.values.' + instance.hidePostStats),
+      hideUserStatsLocal: typeof user.hideUserStats === 'undefined'
+        ? instance.hideUserStats
+        : user.hideUserStats,
+      hideUserStatsDefault: this.$t('settings.values.' + instance.hideUserStats),
       notificationVisibilityLocal: user.notificationVisibility,
       replyVisibilityLocal: user.replyVisibility,
       loopVideoLocal: user.loopVideo,
@@ -28,15 +34,6 @@ const settings = {
         ? instance.collapseMessageWithSubject
         : user.collapseMessageWithSubject,
       collapseMessageWithSubjectDefault: this.$t('settings.values.' + instance.collapseMessageWithSubject),
-      hidePostStatsLocal: user.hidePostStats,
-      hidePostStatsLocal: typeof user.hidePostStats === 'undefined'
-        ? instance.hidePostStats
-        : user.hidePostStats,
-      hidePostStatsDefault : this.$t('settings.values.' + instance.hidePostStats),
-      hideUserStatsLocal: typeof user.hideUserStats === 'undefined'
-        ? instance.hideUserStats
-        : user.hideUserStats,
-      hideUserStatsDefault : this.$t('settings.values.' + instance.hidePostStats),
       stopGifs: user.stopGifs,
       loopSilentAvailable:
         // Firefox

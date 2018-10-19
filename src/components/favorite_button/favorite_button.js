@@ -3,8 +3,8 @@ const FavoriteButton = {
   data () {
     return {
       hidePostStatsLocal: typeof this.$store.state.config.hidePostStats === 'undefined'
-         ? this.$store.state.instance.hidePostStats
-         : this.$store.state.config.hidePostStats,
+        ? this.$store.state.instance.hidePostStats
+        : this.$store.state.config.hidePostStats,
       animated: false
     }
   },
